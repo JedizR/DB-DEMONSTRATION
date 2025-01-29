@@ -33,4 +33,17 @@ con.execute("""CREATE TABLE IF NOT EXISTS Account (
     FOREIGN KEY (bank_id) REFERENCES Bank(bank_id)
 )""")
 
+con.execute("INSERT INTO Bank VALUES (1, 'CitiBank', 'New York', 'CITIUS33')")
+con.execute("INSERT INTO Bank VALUES (2, 'HSBC', 'London', 'HSBCGB2L')")
+con.execute("INSERT INTO Bank VALUES (3, 'DBS', 'Singapore', 'DBSSSGSG')")
+
+con.execute("INSERT INTO Customer VALUES (1, 'John Doe', 'john@email.com', '1234567890', 'NY')")
+con.execute("INSERT INTO Customer VALUES (2, 'Jane Smith', 'jane@email.com', '0987654321', 'London')")
+con.execute("INSERT INTO Customer VALUES (3, 'Bob Chen', 'bob@email.com', '5555555555', 'Singapore')")
+
+con.execute("INSERT INTO Account VALUES (1, 1, 1, 'Savings', 5000.00)")
+con.execute("INSERT INTO Account VALUES (2, 1, 2, 'Checking', 3000.00)")
+con.execute("INSERT INTO Account VALUES (3, 2, 2, 'Savings', 7000.00)")
+con.execute("INSERT INTO Account VALUES (4, 3, 3, 'Investment', 10000.00)")
+
 con.commit()
